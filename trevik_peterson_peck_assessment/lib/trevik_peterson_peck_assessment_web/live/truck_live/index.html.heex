@@ -13,34 +13,34 @@
   row_click={fn {_id, truck} -> JS.navigate(~p"/trucks/#{truck}") end}
 >
   <:col :let={{_id, truck}} label="Location"><%= truck.location_id %></:col>
-  <:col :let={{_id, truck}} label="Applicant"><%= truck.applicant %></:col>
-  <:col :let={{_id, truck}} label="Facility type"><%= truck.facility_type %></:col>
-  <:col :let={{_id, truck}} label="Cnn"><%= truck.cnn %></:col>
+  <%!-- <:col :let={{_id, truck}} label="Applicant"><%= truck.applicant %></:col> --%>
+  <%!-- <:col :let={{_id, truck}} label="Facility type"><%= truck.facility_type %></:col> --%>
+  <%!-- <:col :let={{_id, truck}} label="Cnn"><%= truck.cnn %></:col> --%>
   <:col :let={{_id, truck}} label="Location description"><%= truck.location_description %></:col>
   <:col :let={{_id, truck}} label="Address"><%= truck.address %></:col>
   <:col :let={{_id, truck}} label="Block lot"><%= truck.block_lot %></:col>
   <:col :let={{_id, truck}} label="Block"><%= truck.block %></:col>
   <:col :let={{_id, truck}} label="Lot"><%= truck.lot %></:col>
-  <:col :let={{_id, truck}} label="Permit"><%= truck.permit %></:col>
-  <:col :let={{_id, truck}} label="Status"><%= truck.status %></:col>
+  <%!-- <:col :let={{_id, truck}} label="Permit"><%= truck.permit %></:col> --%>
+  <%!-- <:col :let={{_id, truck}} label="Status"><%= truck.status %></:col> --%>
   <:col :let={{_id, truck}} label="Food items"><%= truck.food_items %></:col>
-  <:col :let={{_id, truck}} label="X"><%= truck.x %></:col>
+  <%!-- <:col :let={{_id, truck}} label="X"><%= truck.x %></:col>
   <:col :let={{_id, truck}} label="Y"><%= truck.y %></:col>
   <:col :let={{_id, truck}} label="Latitude"><%= truck.latitude %></:col>
-  <:col :let={{_id, truck}} label="Longitude"><%= truck.longitude %></:col>
-  <:col :let={{_id, truck}} label="Schedule"><%= truck.schedule %></:col>
-  <:col :let={{_id, truck}} label="Dayshours"><%= truck.dayshours %></:col>
-  <:col :let={{_id, truck}} label="Noi sent"><%= truck.noi_sent %></:col>
+  <:col :let={{_id, truck}} label="Longitude"><%= truck.longitude %></:col> --%>
+  <%!-- <:col :let={{_id, truck}} label="Schedule"><%= truck.schedule %></:col> --%>
+  <%!-- <:col :let={{_id, truck}} label="Dayshours"><%= truck.dayshours %></:col> --%>
+  <%!-- <:col :let={{_id, truck}} label="Noi sent"><%= truck.noi_sent %></:col>
   <:col :let={{_id, truck}} label="Approved"><%= truck.approved %></:col>
   <:col :let={{_id, truck}} label="Received"><%= truck.received %></:col>
   <:col :let={{_id, truck}} label="Prior permit"><%= truck.prior_permit %></:col>
-  <:col :let={{_id, truck}} label="Expiration date"><%= truck.expiration_date %></:col>
+  <:col :let={{_id, truck}} label="Expiration date"><%= truck.expiration_date %></:col> --%>
   <:col :let={{_id, truck}} label="Location"><%= truck.location %></:col>
-  <:col :let={{_id, truck}} label="Fire prevention districts"><%= truck.fire_prevention_districts %></:col>
+  <%!-- <:col :let={{_id, truck}} label="Fire prevention districts"><%= truck.fire_prevention_districts %></:col>
   <:col :let={{_id, truck}} label="Police districts"><%= truck.police_districts %></:col>
   <:col :let={{_id, truck}} label="Supervisor districts"><%= truck.supervisor_districts %></:col>
   <:col :let={{_id, truck}} label="Zip codes"><%= truck.zip_codes %></:col>
-  <:col :let={{_id, truck}} label="Neighborhoods old"><%= truck.neighborhoods_old %></:col>
+  <:col :let={{_id, truck}} label="Neighborhoods old"><%= truck.neighborhoods_old %></:col> --%>
   <:action :let={{_id, truck}}>
     <div class="sr-only">
       <.link navigate={~p"/trucks/#{truck}"}>Show</.link>
