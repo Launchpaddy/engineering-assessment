@@ -42,7 +42,12 @@
 
 <.back navigate={~p"/trucks"}>Back to trucks</.back>
 
-<.modal :if={@live_action == :edit} id="truck-modal" show on_cancel={JS.patch(~p"/trucks/#{@truck}")}>
+<.modal
+  :if={@live_action == :edit}
+  id="truck-modal"
+  show
+  on_cancel={JS.patch(~p"/trucks/#{@truck}")}
+>
   <.live_component
     module={TrevikPetersonPeckAssessmentWeb.TruckLive.FormComponent}
     id={@truck.id}

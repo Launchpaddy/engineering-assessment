@@ -2,7 +2,9 @@ defmodule TrevikPetersonPeckAssessmentWeb.ErrorJSONTest do
   use TrevikPetersonPeckAssessmentWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert TrevikPetersonPeckAssessmentWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert TrevikPetersonPeckAssessmentWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do

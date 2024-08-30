@@ -10,7 +10,8 @@ defmodule TrevikPetersonPeckAssessment.Application do
     children = [
       TrevikPetersonPeckAssessmentWeb.Telemetry,
       TrevikPetersonPeckAssessment.Repo,
-      {DNSCluster, query: Application.get_env(:trevik_peterson_peck_assessment, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:trevik_peterson_peck_assessment, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: TrevikPetersonPeckAssessment.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: TrevikPetersonPeckAssessment.Finch},

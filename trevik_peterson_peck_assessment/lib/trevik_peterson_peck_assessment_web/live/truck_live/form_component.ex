@@ -43,7 +43,11 @@ defmodule TrevikPetersonPeckAssessmentWeb.TruckLive.FormComponent do
         <.input field={@form[:prior_permit]} type="text" label="Prior permit" />
         <.input field={@form[:expiration_date]} type="text" label="Expiration date" />
         <.input field={@form[:location]} type="text" label="Location" />
-        <.input field={@form[:fire_prevention_districts]} type="number" label="Fire prevention districts" />
+        <.input
+          field={@form[:fire_prevention_districts]}
+          type="number"
+          label="Fire prevention districts"
+        />
         <.input field={@form[:police_districts]} type="number" label="Police districts" />
         <.input field={@form[:supervisor_districts]} type="number" label="Supervisor districts" />
         <.input field={@form[:zip_codes]} type="text" label="Zip codes" />

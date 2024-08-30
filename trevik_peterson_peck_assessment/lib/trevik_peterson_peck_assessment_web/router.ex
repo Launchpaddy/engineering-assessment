@@ -17,8 +17,8 @@ defmodule TrevikPetersonPeckAssessmentWeb.Router do
   scope "/", TrevikPetersonPeckAssessmentWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
-
+    # get "/", PageController, :home
+    live "/", TruckLive.Index, :index
     live "/trucks", TruckLive.Index, :index
     live "/trucks/new", TruckLive.Index, :new
     live "/trucks/:id/edit", TruckLive.Index, :edit

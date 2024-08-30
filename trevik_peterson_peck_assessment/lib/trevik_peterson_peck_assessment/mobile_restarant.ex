@@ -21,6 +21,11 @@ defmodule TrevikPetersonPeckAssessment.MobileRestarant do
     Repo.all(Truck)
   end
 
+  def paginate_trucks(params \\ []) do
+    Truck
+    |> Repo.paginate(params)
+  end
+
   @doc """
   Gets a single truck.
 

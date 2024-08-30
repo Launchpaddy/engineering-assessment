@@ -59,7 +59,8 @@ defmodule TrevikPetersonPeckAssessment.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:csv, "~> 3.2.1"}
+      {:csv, "~> 3.2.1"},
+      {:scrivener_ecto, "~> 2.7"}
     ]
   end
 
@@ -76,7 +77,10 @@ defmodule TrevikPetersonPeckAssessment.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind trevik_peterson_peck_assessment", "esbuild trevik_peterson_peck_assessment"],
+      "assets.build": [
+        "tailwind trevik_peterson_peck_assessment",
+        "esbuild trevik_peterson_peck_assessment"
+      ],
       "assets.deploy": [
         "tailwind trevik_peterson_peck_assessment --minify",
         "esbuild trevik_peterson_peck_assessment --minify",
