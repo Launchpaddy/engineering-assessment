@@ -1,0 +1,54 @@
+<.header>
+  Truck <%= @truck.id %>
+  <:subtitle>This is a truck record from your database.</:subtitle>
+  <:actions>
+    <.link patch={~p"/trucks/#{@truck}/show/edit"} phx-click={JS.push_focus()}>
+      <.button>Edit truck</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Location"><%= @truck.location_id %></:item>
+  <:item title="Applicant"><%= @truck.applicant %></:item>
+  <:item title="Facility type"><%= @truck.facility_type %></:item>
+  <:item title="Cnn"><%= @truck.cnn %></:item>
+  <:item title="Location description"><%= @truck.location_description %></:item>
+  <:item title="Address"><%= @truck.address %></:item>
+  <:item title="Block lot"><%= @truck.block_lot %></:item>
+  <:item title="Block"><%= @truck.block %></:item>
+  <:item title="Lot"><%= @truck.lot %></:item>
+  <:item title="Permit"><%= @truck.permit %></:item>
+  <:item title="Status"><%= @truck.status %></:item>
+  <:item title="Food items"><%= @truck.food_items %></:item>
+  <:item title="X"><%= @truck.x %></:item>
+  <:item title="Y"><%= @truck.y %></:item>
+  <:item title="Latitude"><%= @truck.latitude %></:item>
+  <:item title="Longitude"><%= @truck.longitude %></:item>
+  <:item title="Schedule"><%= @truck.schedule %></:item>
+  <:item title="Dayshours"><%= @truck.dayshours %></:item>
+  <:item title="Noi sent"><%= @truck.noi_sent %></:item>
+  <:item title="Approved"><%= @truck.approved %></:item>
+  <:item title="Received"><%= @truck.received %></:item>
+  <:item title="Prior permit"><%= @truck.prior_permit %></:item>
+  <:item title="Expiration date"><%= @truck.expiration_date %></:item>
+  <:item title="Location"><%= @truck.location %></:item>
+  <:item title="Fire prevention districts"><%= @truck.fire_prevention_districts %></:item>
+  <:item title="Police districts"><%= @truck.police_districts %></:item>
+  <:item title="Supervisor districts"><%= @truck.supervisor_districts %></:item>
+  <:item title="Zip codes"><%= @truck.zip_codes %></:item>
+  <:item title="Neighborhoods old"><%= @truck.neighborhoods_old %></:item>
+</.list>
+
+<.back navigate={~p"/trucks"}>Back to trucks</.back>
+
+<.modal :if={@live_action == :edit} id="truck-modal" show on_cancel={JS.patch(~p"/trucks/#{@truck}")}>
+  <.live_component
+    module={TrevikPetersonPeckAssessmentWeb.TruckLive.FormComponent}
+    id={@truck.id}
+    title={@page_title}
+    action={@live_action}
+    truck={@truck}
+    patch={~p"/trucks/#{@truck}"}
+  />
+</.modal>
