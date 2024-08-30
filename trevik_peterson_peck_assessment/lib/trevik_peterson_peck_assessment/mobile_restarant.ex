@@ -52,7 +52,7 @@ defmodule TrevikPetersonPeckAssessment.MobileRestarant do
   def create_truck(attrs \\ %{}) do
     %Truck{}
     |> Truck.changeset(attrs)
-    |> Repo.insert()
+    |> Repo.insert!()
   end
 
   @doc """
@@ -70,7 +70,7 @@ defmodule TrevikPetersonPeckAssessment.MobileRestarant do
   def update_truck(%Truck{} = truck, attrs) do
     truck
     |> Truck.changeset(attrs)
-    |> Repo.update()
+    |> Repo.update!()
   end
 
   @doc """
